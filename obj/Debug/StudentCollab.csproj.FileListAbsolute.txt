@@ -89,3 +89,5 @@ C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\obj\Debug\StudentCollab.
 C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\obj\Debug\StudentCollab.csproj.CopyComplete
 C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\obj\Debug\StudentCollab.dll
 C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\obj\Debug\StudentCollab.pdb
+C:\Users\Elad Ben Avraham\Source\Repos\xaero24\StudentCollab\obj\Debug\StudentCollab.dll
+C:\Users\Elad Ben Avraham\Source\Repos\xaero24\StudentCollab\obj\Debug\StudentCollab.pdb
