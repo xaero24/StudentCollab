@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using StudentCollab.Models;
+using StudentCollab.Dal;
 
 namespace StudentCollab.Controllers
 {
@@ -30,11 +31,21 @@ namespace StudentCollab.Controllers
 
         public ActionResult Submit()
         {
-            User usr = new User();
-            usr.UserName = Request.Form["username"];
-            usr.Password = Request.Form["pass"]; //same name
+            string username = Request.Form["username"];
+            string password = Request.Form["pass"]; //same name
 
-            if (!(usr.UserName == null || usr.Password == null)) return RedirectToAction("Contact", usr);
+            if (!(username == null || password == null))
+            {
+                UserDal dal = new UserDal();
+                List<User> Users =
+                (from x in dal.Users
+                 where x.UserName == username && x.Password == password
+                 select x).ToList<User>();
+                if(Users.Any()) return RedirectToAction("Contact", Users[0]);
+                else return RedirectToAction("Login");
+
+            }
+            
             else return RedirectToAction("Login");
 
 

@@ -89,3 +89,8 @@ C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\obj\Debug\StudentCollab.
 C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\obj\Debug\StudentCollab.csproj.CopyComplete
 C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\obj\Debug\StudentCollab.dll
 C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\obj\Debug\StudentCollab.pdb
+C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\bin\System.Data.SqlClient.dll
+C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\bin\EntityFramework.dll
+C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\bin\EntityFramework.SqlServer.dll
+C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\bin\EntityFramework.xml
+C:\Users\tzvip\source\repos\StudentCollab\StudentCollab\bin\EntityFramework.SqlServer.xml
