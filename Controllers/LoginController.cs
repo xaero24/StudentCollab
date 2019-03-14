@@ -51,5 +51,39 @@ namespace StudentCollab.Controllers
 
 
         }
+
+        public ActionResult Signup()
+        {
+            
+
+            return View();
+        }
+
+        public ActionResult SignupCont()
+        {
+
+            string username = Request.Form["Username"];
+            string email = Request.Form["email"];
+            string password = Request.Form["password"];
+            string passwordConfirm = Request.Form["passwordConfirm"];
+            //if the password not the same return to the sign up form
+            if (!password.Equals(passwordConfirm))return RedirectToAction("Signup");
+            else
+            {
+                UserDal dal = new UserDal();
+                User tempUsr = new User()
+                {
+                    UserName = username,
+                    Password = password,
+                    Email = email,
+                    rank = 1
+                };
+
+                dal.Users.Add(tempUsr);
+                dal.SaveChanges();
+            }
+
+            return RedirectToAction("Login");
+        }
     }
 }

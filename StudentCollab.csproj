@@ -203,6 +203,7 @@
     <Content Include="Content\Login_Template\vendor\select2\select2.js" />
     <Content Include="Content\Login_Template\vendor\select2\select2.min.css" />
     <Content Include="Content\Login_Template\vendor\select2\select2.min.js" />
+    <Content Include="Content\Signup_Template\main.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -334,9 +335,12 @@
     <Content Include="Views\Shared\_LoginTemplate.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Login\Contact.cshtml" />
+    <Content Include="Views\Shared\_SignupTemplate.cshtml" />
+    <Content Include="Views\Login\Signup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Signup\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
