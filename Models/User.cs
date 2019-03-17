@@ -14,5 +14,7 @@ namespace StudentCollab.Models
         public string Password { get; set; }
         public string Email { get; set; }
         public int rank { get; set; }
+        public string institution { get; set; }
+        public int? year { get; set; }
     }
 }

@@ -41,7 +41,18 @@ namespace StudentCollab.Controllers
                 (from x in dal.Users
                  where x.UserName == username && x.Password == password
                  select x).ToList<User>();
-                if(Users.Any()) return RedirectToAction("Contact", Users[0]);
+                if (Users.Any())
+                {
+                    //Creates the user class as defined by rank
+                    switch(Users[0].rank)
+                    {
+                        case 0:AdminUser admin = new AdminUser(Users[0]);
+                            break;
+                        case 1:ManagerUser manager = new ManagerUser(Users[0]);
+                            break;
+                    }
+                    return RedirectToAction("Contact", Users[0]);
+                }
                 else return RedirectToAction("Login");
 
             }
@@ -66,6 +77,20 @@ namespace StudentCollab.Controllers
             string email = Request.Form["email"];
             string password = Request.Form["password"];
             string passwordConfirm = Request.Form["passwordConfirm"];
+            string institution = null;
+            if (!(Request.Form["institution"].Equals("")))
+            {
+                institution = Request.Form["institution"];
+            }
+            int? year = null;
+            try
+            {
+                 year = Int32.Parse(Request.Form["year"]);
+            }
+            catch
+            {
+                year = null;
+            }
             //if the password not the same return to the sign up form
             if (!password.Equals(passwordConfirm))return RedirectToAction("Signup");
             else
@@ -76,11 +101,27 @@ namespace StudentCollab.Controllers
                     UserName = username,
                     Password = password,
                     Email = email,
-                    rank = 1
+                    rank = 1,
+                    institution = institution,
+                    year = year
+
                 };
 
-                dal.Users.Add(tempUsr);
-                dal.SaveChanges();
+
+                //Checks if a user with the same user name exists
+
+                //TODO: Add notification of failure - "Same user name already exists"
+                List<User> Users =
+                (from x in dal.Users
+                 where x.UserName == username
+                 select x).ToList<User>();
+                if(!(Users.Any()))
+                {
+                    dal.Users.Add(tempUsr);
+                    dal.SaveChanges();
+                }
+
+                
             }
 
             return RedirectToAction("Login");
