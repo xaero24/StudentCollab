@@ -1,24 +1,39 @@
 ﻿@model StudentCollab.Models.User
 @{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Sign in";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Contact</h2>
+<h2>Sign in</h2>
 
-Details: <br />
+@ViewData["CurrentUser"]
 
-User Name: @Model.UserName <br />
-PassWord: @Model.Password <br />
-@if(Model.rank == 1)
+ <br />
+@if (Model.UserName == null)
 {
-    <i>Rank: Basic User</i>
+    <i>
+        <h1 style="color:darkred">Wrong User name or Password</h1>
+        Would you like to @Html.ActionLink("Sign up", "Signup", "Login") or try @Html.ActionLink("Log in","Login","Login")
+    </i>
 }
-else if(Model.rank == 0)
+else
 {
-    <i>Rank: Admin</i>
-}
-else if(Model.rank == 2)
-{
-    <i>Rank: Manager</i>
-}
+    <i>
+        Details:
+        User Name: @Model.UserName<br />
+        PassWord: @Model.Password <br />
+    </i>
+    if (Model.rank == 1)
+    {
+        <i>Rank: Basic User</i>
+    }
+    else if (Model.rank == 0)
+    {
+        <i>Rank: Admin</i>
+    }
+    else if (Model.rank == 2)
+    {
+        <i>Rank: Manager</i>
+    }
+    }
+

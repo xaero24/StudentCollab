@@ -24,7 +24,6 @@ namespace StudentCollab.Controllers
 
         public ActionResult Contact(User getUsr)
         {
-            ViewBag.Message = "Your contact page.";
 
             return View(getUsr);
         }
@@ -44,16 +43,27 @@ namespace StudentCollab.Controllers
                 if (Users.Any())
                 {
                     //Creates the user class as defined by rank
-                    switch(Users[0].rank)
+                    switch (Users[0].rank)
                     {
-                        case 0:AdminUser admin = new AdminUser(Users[0]);
+                        case 0:
+                            AdminUser admin = new AdminUser(Users[0]);
+                            ViewData["CurrentUser"] = admin;
                             break;
-                        case 1:ManagerUser manager = new ManagerUser(Users[0]);
+                        case 1:
+                            ManagerUser manager = new ManagerUser(Users[0]);
+                            ViewData["CurrentUser"] = manager;
+                            break;
+                        case 2:
+                            User usr = new User(Users[0]);
+                            ViewData["CurrentUser"] = usr;
                             break;
                     }
                     return RedirectToAction("Contact", Users[0]);
                 }
-                else return RedirectToAction("Login");
+                else
+                {
+                    return RedirectToAction("Contact");
+                }
 
             }
             
@@ -109,8 +119,6 @@ namespace StudentCollab.Controllers
 
 
                 //Checks if a user with the same user name exists
-
-                //TODO: Add notification of failure - "Same user name already exists"
                 List<User> Users =
                 (from x in dal.Users
                  where x.UserName == username
@@ -121,7 +129,6 @@ namespace StudentCollab.Controllers
                     dal.SaveChanges();
                 }
 
-                
             }
 
             return RedirectToAction("Login");

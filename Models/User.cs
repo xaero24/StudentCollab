@@ -16,5 +16,19 @@ namespace StudentCollab.Models
         public int rank { get; set; }
         public string institution { get; set; }
         public int? year { get; set; }
+
+        public User()
+        {
+       
+        }
+
+        public User(User usr)
+        {
+            this.UserName = usr.UserName;
+            this.Password = usr.Password;
+            this.rank = usr.rank;
+            this.institution = usr.institution;
+            this.year = usr.year;
+        }
     }
 }
