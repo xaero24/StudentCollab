@@ -1,0 +1,212 @@
+﻿@model StudentCollab.Models.User
+
+@{
+    ViewBag.Title = "MainPage";
+    Layout = "~/Views/Shared/_MainPageLayout.cshtml";
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+Design by Free CSS Templates
+http://csstemplatesforfree.com
+Released for free under a Creative Commons Attribution 2.5 License
+
+Title      : Embouteillage
+Version    : 1.0
+Released   : 200800204
+Description: Three-column blog design with the third column allocated for <b>ads</b>. Features Web 2.0 design ideal for 1024x768 resolutions.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+    <!-- start header -->
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo" style="flex">
+                <h1><a href="#">StudyCollab</a></h1>
+                <p><a href="#">Learn from the best</a></p>
+            </div>
+            @*<div id="rss"><a href="#">Search your subject</a></div>
+                <div id="search">
+                    <form id="searchform" method="get" action="">
+                        <fieldset>
+                            <input type="text" name="s" id="s" size="15" value="" />
+                            <input type="submit" id="x" value="Search" />
+                        </fieldset>
+                    </form>
+                </div>*@
+        </div>
+        <!-- end header -->
+        <!-- star menu -->
+        <div id="menu">
+            <ul>
+                <li class="current_page_item"><a href="#">Home</a></li>
+                <li><a href="#">Upload now</a></li>
+                <li><a href="#">Recent followers upload</a></li>
+                <li><a href="#">My profile</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <!-- end menu -->
+        <!-- start page -->
+        <div id="page">
+            <!-- start <b>ads</b> -->
+            <div id="<b>ads</b>"><a href="#"><img src="~/images/ad160x600.gif" alt="" width="160" height="600" /></a></div>
+            <!-- end <b>ads</b> -->
+            <!-- start content -->
+            <div id="content">
+                <div class="post">
+                    <div class="title">
+                        <h2><a href="#">[1th recent post]</a></h2>
+                        <p><small>tmie: 20th, 2008 by <a href="#">[User-name]</a></small></p>
+                    </div>
+                    <div class="entry">
+                        <p><img src="@Url.Content("~/Content/MainPage_Template/")images/misha.jpg" alt="" width="120" height="120" class="left" />This is <strong>Embouteillage</strong>, a free, fully standards-compliant CSS template designed by <a href="http://csstemplatesforfree.com/">Free CSS Templates</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attributions 2.5</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Have fun!</p>
+                        <p>This template is also available as a <a href="http://csstemplatesforfree.com/preview/level2/">WordPress theme</a> at <a href="http://csstemplatesforfree.com/">Free WordPress Themes</a>.</p>
+                    </div>
+                    <p class="links"> <a href="#" class="more">Read More</a> &nbsp;&nbsp;&nbsp; <a href="#" class="comments">No Comments</a> </p>
+                </div>
+                <div class="post">
+                    <div class="title">
+                        <h2><a href="#">[2th recent post]</a></h2>
+                        <p><small>time: 20th, 2008 by <a href="#">[User-name]</a></small></p>
+                    </div>
+                    <div class="entry">
+                        <p>Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra  vulputate enim. Vivamus fermentum nibh in augue. Praesent a lacus at  urna congue rutrum. Nulla enim eros, porttitor eu, tempus id, varius  non, nibh. Quisque semper augue mattis wisi. Maecenas ligula.  Pellentesque viverra vulputate enim.</p>
+                    </div>
+                    <p class="links"> <a href="#" class="more">Read More</a> &nbsp;&nbsp;&nbsp; <a href="#" class="comments">No Comments</a> </p>
+                </div>
+            </div>
+            <!-- end content -->
+            <!-- start sidebar -->
+            <div id="sidebar">
+                <ul>
+                    <li id="categories">
+                        <h2>Categories</h2>
+                        <ul>
+                            <li><a href="#">Sce</a> (1) </li>
+                            <li><a href="#">Bgu</a> (4) </li>
+                        </ul>
+                    </li>
+                    <li id="calendar">
+                        <h2>Calendar</h2>
+                        <div id="calendar_wrap">
+                            <table id="wp-calendar" summary="Calendar">
+                                <caption>
+                                    August 2008
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th abbr="Monday" scope="col" title="Monday">M</th>
+                                        <th abbr="Tuesday" scope="col" title="Tuesday">T</th>
+                                        <th abbr="Wednesday" scope="col" title="Wednesday">W</th>
+                                        <th abbr="Thursday" scope="col" title="Thursday">T</th>
+                                        <th abbr="Friday" scope="col" title="Friday">F</th>
+                                        <th abbr="Saturday" scope="col" title="Saturday">S</th>
+                                        <th abbr="Sunday" scope="col" title="Sunday">S</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <td abbr="August" colspan="3" id="prev"><a href="#">&laquo; Jul</a></td>
+                                        <td class="pad">&nbsp;</td>
+                                        <td abbr="September" colspan="3" id="next" class="pad"><a href="#">Sep &raquo;</a></td>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" class="pad">&nbsp;</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td id="today">13</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                        <td>24</td>
+                                        <td>20</td>
+                                        <td>26</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                        <td>31</td>
+                                        <td class="pad" colspan="2">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <h2>Inbox</h2>
+                        <ul>
+                            <li><a href="#">msg1</a></li>
+                            <li><a href="#">msg2</a></li>
+                            <li><a href="#">msg3</a></li>
+                        </ul>
+                    </li>
+                    @if (!(Model.UserName.IsEmpty()))
+                    {
+                        <i>User Logged:</i> @Model.UserName
+                    }
+                    else
+                    {
+                        <a href="~/Login/Login" style="color:azure">
+                            Sign in   
+                        </a>
+                    }
+
+                    <li style="float:right">
+                        <a href="~/MainPage/logout" style="color: red">
+                            Loguot
+                            <img src="http://i64.tinypic.com/157n953.png" border="0" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- end sidebar -->
+        </div>
+        <!-- end page -->
+        <!-- start footer -->
+        <div id="footer">
+            <p class="legal">
+                &copy;2019 Sce-Group11. All Rights Reserved.
+                &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                Design by <a href="#">Team_11</a>
+                &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                Icons by <a href="#">real_photos</a>.
+            </p>
+            <!-- end footer -->
+        </div>
+    </div>
+</body>
+</html>
+
+

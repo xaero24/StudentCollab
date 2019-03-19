@@ -58,7 +58,8 @@ namespace StudentCollab.Controllers
                             ViewData["CurrentUser"] = usr;
                             break;
                     }
-                    return RedirectToAction("Contact", Users[0]);
+                    //return RedirectToAction("Contact", Users[0]);
+                    return RedirectToAction("MainPage", "MainPage", Users[0]);
                 }
                 else
                 {

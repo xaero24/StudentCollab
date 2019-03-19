@@ -157,6 +157,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MainPageController.cs" />
     <Compile Include="Dal\UserDal.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -185,6 +186,7 @@
     <Content Include="Content\Login_Template\images\icons\favicon.ico" />
     <Content Include="Content\Login_Template\images\icons\icon-google.png" />
     <Content Include="Content\Login_Template\images\img-01.jpg" />
+    <Content Include="Content\Login_Template\images\miron.jpeg" />
     <Content Include="Content\Login_Template\js\main.js" />
     <Content Include="Content\Login_Template\vendor\animate\animate.css" />
     <Content Include="Content\Login_Template\vendor\bootstrap\css\bootstrap-grid.css" />
@@ -205,6 +207,18 @@
     <Content Include="Content\Login_Template\vendor\select2\select2.js" />
     <Content Include="Content\Login_Template\vendor\select2\select2.min.css" />
     <Content Include="Content\Login_Template\vendor\select2\select2.min.js" />
+    <Content Include="Content\MainPage_Template\default.css" />
+    <Content Include="Content\MainPage_Template\images\ad160x600.gif" />
+    <Content Include="Content\MainPage_Template\images\img01.jpg" />
+    <Content Include="Content\MainPage_Template\images\img02.jpg" />
+    <Content Include="Content\MainPage_Template\images\img03.gif" />
+    <Content Include="Content\MainPage_Template\images\img04.gif" />
+    <Content Include="Content\MainPage_Template\images\img05.gif" />
+    <Content Include="Content\MainPage_Template\images\img06.jpg" />
+    <Content Include="Content\MainPage_Template\images\img07.gif" />
+    <Content Include="Content\MainPage_Template\images\img08.gif" />
+    <Content Include="Content\MainPage_Template\images\misha.jpg" />
+    <Content Include="Content\MainPage_Template\images\spacer.gif" />
     <Content Include="Content\Signup_Template\main.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -312,6 +326,7 @@
     <Content Include="Content\Login_Template\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="Content\Login_Template\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Content\Login_Template\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\MainPage_Template\images\Thumbs.db" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -339,6 +354,8 @@
     <Content Include="Views\Login\Contact.cshtml" />
     <Content Include="Views\Shared\_SignupTemplate.cshtml" />
     <Content Include="Views\Login\Signup.cshtml" />
+    <Content Include="Views\Shared\_MainPageLayout.cshtml" />
+    <Content Include="Views\MainPage\MainPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
